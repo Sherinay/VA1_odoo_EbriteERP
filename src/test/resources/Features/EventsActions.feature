@@ -7,7 +7,8 @@ Feature: Find Events module in Discuss page
     And all the checkboxes are clickable
 
   Scenario: edit Wedding event in the list
-    Given click on Wedding in the event list
-    When Wedding – Odoo should be the page title
-    Then click on Edit And check Online Event option
-    And uncheck Automatically Confirm Registrations And US/Eastern should be selected in TimeZone box And click Save
+    Given user is already on Wedding in the event list
+    When user click on Edit and check Online Event option
+    And uncheck Automatically Confirm Registrations
+    Then US/Eastern should be selected in TimeZone box
+    And click Save

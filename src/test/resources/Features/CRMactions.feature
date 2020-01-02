@@ -2,7 +2,7 @@ Feature: Find CRM in Discuss page
 
   Scenario: create new column
     Given the user clicks on Add new Column tab
-    When the user enters “Pending” column title name
+    When the user enters "Pending" column title name
     Then the user clicks on Kanban Config dropdown
     And the following options should be available
 
@@ -15,11 +15,13 @@ Feature: Find CRM in Discuss page
 
   Scenario: add new title in the column
     Given the user has access to the plus sign in the new column
-    When the user enters “Bugbusters” to the title box
+    When the user enters "Bugbusters" to the title box
     Then Click on Add And “Bugbusters” should be on the top of the column
+
 
   Scenario: delete a column
     Given the user clicks on Kanban Config dropdown
     When the user clicks on Delete option from the list
-    Then “Are you sure that you want to remove this column ?” should be displayed
-    And Click OK And “Pending” column should not be displayed
+    Then "Are you sure that you want to remove this column?" should be displayed
+    When user clicks on OK
+    Then "Pending" column should not be displayed
