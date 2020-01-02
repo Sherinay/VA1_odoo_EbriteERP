@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="VA1_odoo_EbriteERP" />
         <module name="VA1_odoo_BriteERP" />
       </profile>
     </annotationProcessing>
