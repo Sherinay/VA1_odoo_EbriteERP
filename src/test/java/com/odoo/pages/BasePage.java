@@ -114,4 +114,12 @@ public abstract class BasePage {
         }
     }
 
+    public void navigateTo(String tab){
+
+
+
+       // Driver.get().findElement(By.xpath("//span[contains(text(),'"+tab+"']")).click();
+
+    }
+
 }

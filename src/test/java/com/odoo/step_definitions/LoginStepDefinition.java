@@ -8,6 +8,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class LoginStepDefinition {
 
@@ -16,6 +18,15 @@ public class LoginStepDefinition {
         System.out.println("Opening the login page");
         String url = ConfigurationReader.get("url");
         Driver.get().get(url);
+
+
+    }
+
+    @Given("first and second messages is displayed")
+    public void first_and_second_messages_is_displayed() {
+        LoginPage loginPage = new LoginPage();
+        loginPage.FirstMessage.isDisplayed();
+        loginPage.SecondMessage.isDisplayed();
     }
 
     @When("the users enters the login information")
@@ -26,14 +37,25 @@ public class LoginStepDefinition {
 
         LoginPage loginPage = new LoginPage();
         loginPage.login(username, password);
+
+        BrowserUtils.waitFor(2);
+        loginPage.inboxmessage.isDisplayed();
     }
 
     @Then("the user should be able to login")
     public void the_user_should_be_able_to_login() {
-        System.out.println("Verifying that user is logged in");
+
         BrowserUtils.waitFor(2);
 
         String actualTitle = Driver.get().getTitle();
         Assert.assertEquals("#Inbox - Odoo", actualTitle);
+    }
+
+    @Then("the user should not be able to login")
+    public void the_user_should_not_be_able_to_login() {
+        LoginPage loginPage = new LoginPage();
+        loginPage.wrongmessage.isDisplayed();
+
+
     }
 }

@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
         plugin= {"json:target/cucumber.json"},
         features = "src/test/resources/Features/",
         glue = "com/odoo/step_definitions",
-        dryRun = false,
-        tags = "@driver"
+        dryRun =false,
+        tags = "@driver1"
 )
 public class CukesRunner {
 }
