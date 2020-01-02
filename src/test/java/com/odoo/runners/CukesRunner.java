@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/Features/",
         glue = "com/odoo/step_definitions",
         dryRun =false,
-        tags = "@driver1"
+        tags = "@CRM"
 )
 public class CukesRunner {
 }

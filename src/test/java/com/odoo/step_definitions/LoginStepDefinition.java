@@ -38,7 +38,7 @@ public class LoginStepDefinition {
         LoginPage loginPage = new LoginPage();
         loginPage.login(username, password);
 
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(3);
         loginPage.inboxmessage.isDisplayed();
     }
 
