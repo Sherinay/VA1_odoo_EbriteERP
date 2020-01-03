@@ -34,9 +34,7 @@ public class CRMaction_StepDefinition {
     public void the_user_clicks_on_Kanban_Config_dropdown() {
         Driver.get().findElement(By.xpath("//button[@aria-label='kanban']")).click();
         BrowserUtils.waitFor(7);
-//        WebElement actual=Driver.get().findElement(By.xpath("(//i[@class='fa fa-gear'])[5]"));
-//        Assert.assertTrue(actual.isDisplayed());
-//        System.out.println(actual.getText());
+
     }
 
     @Then("the following options should be available")
