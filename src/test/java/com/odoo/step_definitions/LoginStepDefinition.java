@@ -32,11 +32,11 @@ public class LoginStepDefinition {
     @When("the users enters the login information")
     public void the_users_enters_the_login_information() {
         System.out.println("Entering login information");
-        String username = ConfigurationReader.get("username");
-        String password = ConfigurationReader.get("password");
+        String Username = ConfigurationReader.get("event_user1");
+        String Password = ConfigurationReader.get("event_password");
 
         LoginPage loginPage = new LoginPage();
-        loginPage.login(username, password);
+        loginPage.login(Username, Password);
 
         BrowserUtils.waitFor(3);
         loginPage.inboxmessage.isDisplayed();
