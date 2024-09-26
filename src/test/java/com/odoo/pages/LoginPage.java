@@ -37,11 +37,11 @@ public class LoginPage {
     @FindBy(css = "p[class='alert alert-danger']")
     public WebElement wrongmessage;
 
-    public void login(String userNameStr, String passwordStr) {
+    public void login(String Username, String Password) {
         BrowserUtils.waitFor(2);
         signin.click();
-        userName.sendKeys(userNameStr);
-        password.sendKeys(passwordStr);
+        userName.sendKeys(Username);
+        password.sendKeys(Password);
         submit.click();
 
 
